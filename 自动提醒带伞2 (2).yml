@@ -9,12 +9,12 @@ dependencies:
 - current_identifier: null
   type: marketplace
   value:
-    marketplace_plugin_unique_identifier: langgenius/gemini:0.7.14@f0200773cd6025864b2215dfe4a353eaf23f9635e9b6098ae0d9f2cb41fc5df4
+    marketplace_plugin_unique_identifier: langgenius/gemini:0.7.15@ca2b8f2599b87de968354f0e2ccbbc0d76bac5ebf275c3f0fbdae48881d74518
     version: null
 - current_identifier: null
   type: marketplace
   value:
-    marketplace_plugin_unique_identifier: langgenius/openai:0.2.9@05ad2af7b3001f46adc21a0972fe11536dc256672c97e0c530869e17619c76ad
+    marketplace_plugin_unique_identifier: langgenius/openai:0.2.10@7ca552fb9e48caa4deddfdef5aa71c200d06d03c26c2e8bb428b3250101b9cb3
     version: null
 - current_identifier: null
   type: marketplace
@@ -114,30 +114,6 @@ workflow:
       zIndex: 0
     - data:
         isInLoop: false
-        sourceType: llm
-        targetType: llm
-      id: 1773161786629-source-1773161833949-target
-      selected: false
-      source: '1773161786629'
-      sourceHandle: source
-      target: '1773161833949'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInLoop: false
-        sourceType: llm
-        targetType: if-else
-      id: 1773161833949-source-1773162533349-target
-      selected: false
-      source: '1773161833949'
-      sourceHandle: source
-      target: '1773162533349'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInLoop: false
         sourceType: if-else
         targetType: tool
       id: 1773162533349-true-1773082577767-target
@@ -172,6 +148,30 @@ workflow:
       targetHandle: target
       type: custom
       zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1773161786629-source-1773161833949-target
+      selected: false
+      source: '1773161786629'
+      sourceHandle: source
+      target: '1773161833949'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: if-else
+      id: 1773161833949-source-1773162533349-target
+      selected: false
+      source: '1773161833949'
+      sourceHandle: source
+      target: '1773162533349'
+      targetHandle: target
+      type: custom
+      zIndex: 0
     nodes:
     - data:
         authorization:
@@ -201,10 +201,10 @@ workflow:
       id: '1773079486210'
       position:
         x: 342
-        y: 12
+        y: 25
       positionAbsolute:
         x: 342
-        y: 12
+        y: 25
       selected: true
       sourcePosition: right
       targetPosition: left
@@ -280,10 +280,10 @@ workflow:
       id: '1773080851702'
       position:
         x: 683
-        y: 62
+        y: 75
       positionAbsolute:
         x: 683
-        y: 62
+        y: 75
       selected: true
       sourcePosition: right
       targetPosition: left
@@ -384,22 +384,22 @@ workflow:
         tool_parameters:
           message:
             type: mixed
-            value: '{{#1773161833949.text#}}'
+            value: '{{#1773161786629.text#}}'
           subject:
             type: mixed
             value: 下雨了
           to:
             type: mixed
-            value: 1@outlook.com
+            value: 4@outlook.com
         type: tool
       height: 51
       id: '1773082577767'
       position:
         x: 2408
-        y: 74
+        y: 87
       positionAbsolute:
         x: 2408
-        y: 74
+        y: 87
       selected: true
       sourcePosition: right
       targetPosition: left
@@ -419,7 +419,7 @@ workflow:
             - sun
         frequency: daily
         mode: visual
-        selected: false
+        selected: true
         timezone: America/New_York
         title: 定时触发器
         type: trigger-schedule
@@ -433,11 +433,11 @@ workflow:
       height: 129
       id: '1773172110016'
       position:
-        x: 0
-        y: 23
+        x: 1.0498103287789036
+        y: 36
       positionAbsolute:
-        x: 0
-        y: 23
+        x: 1.0498103287789036
+        y: 36
       selected: true
       sourcePosition: right
       targetPosition: left
@@ -453,14 +453,14 @@ workflow:
           completion_params:
             temperature: 0.7
           mode: chat
-          name: gemini-2.5-flash
-          provider: langgenius/gemini/google
+          name: gpt-4o-mini
+          provider: langgenius/openai/openai
         prompt_template:
         - id: 6738ce43-4ea2-4999-8959-78ee6ad226e4
           role: system
           text: '你是一个贴心的天气小秘书。根据输入的天气代码（如 RAIN 代表下雨），写一段 50 字以内的温馨提醒邮件。
 
-            拒绝机械化，要像一个元气满满的少女，用“だいすきっ！神楽坂ですよ♡”结尾（前面用中文不要出现任何英文，只是自称用可愛いの神楽坂）'
+            拒绝机械化，要像一个元气满满的少女，用“だいすきっ！神楽坂ですよ♡”结尾（前面用中文不要出现任何英文，只是自称用可愛いの神楽坂）不要生成\n'
         - id: 9b8b9496-528f-4348-9911-c756f9c48276
           role: user
           text: 当前天气代码是：{{{#1773080851702.result#}}}}，清根据这个写一段提醒
@@ -473,10 +473,10 @@ workflow:
       id: '1773161786629'
       position:
         x: 1365
-        y: 44
+        y: 57
       positionAbsolute:
         x: 1365
-        y: 44
+        y: 57
       selected: true
       sourcePosition: right
       targetPosition: left
@@ -492,8 +492,8 @@ workflow:
           completion_params:
             temperature: 0.7
           mode: chat
-          name: gpt-4
-          provider: langgenius/openai/openai
+          name: gemini-2.5-flash
+          provider: langgenius/gemini/google
         prompt_template:
         - id: 911a391f-abfa-456e-ad28-7ecbf7db76dc
           role: system
@@ -501,11 +501,11 @@ workflow:
 
             语气是否生硬？
 
-            是否包含乱码或未翻译的英文代码（如 RAIN）？出现没翻译的翻译成中文，但保留日语
+            是否包含乱码或未翻译的英文代码（如 RAIN）？出现没翻译的翻译成中文，但保留日语。无视♡。
 
-            是否有逻辑错误？ 如果文本没问题，原样返回该文本。如果发现问题，请修正后返回一个完美的版本。
+            是否有逻辑错误？ 如果文本没问题，原样返回该文本。
 
-            如果通过，请直接输出文案。不要输出任何多余内容。如果不通过就去掉里面的神楽坂'
+            如果不通过就去掉里面的神楽坂'
         - id: 7935a1eb-4414-44df-b42c-0f90a535a05a
           role: user
           text: 待检查文本：{{{#1773161786629.text#}}}
@@ -518,10 +518,10 @@ workflow:
       id: '1773161833949'
       position:
         x: 1706
-        y: 44
+        y: 57
       positionAbsolute:
         x: 1706
-        y: 44
+        y: 57
       selected: true
       sourcePosition: right
       targetPosition: left
@@ -547,10 +547,10 @@ workflow:
       id: '1773162533349'
       position:
         x: 2047
-        y: 26
+        y: 39
       positionAbsolute:
         x: 2047
-        y: 26
+        y: 39
       selected: true
       sourcePosition: right
       targetPosition: left
@@ -659,23 +659,23 @@ workflow:
             value: 下雨了
           to:
             type: mixed
-            value: 1@outlook.com
+            value: 4@outlook.com
         type: tool
       height: 51
       id: '17731662054810'
       position:
         x: 2408
-        y: 205
+        y: 218
       positionAbsolute:
         x: 2408
-        y: 205
+        y: 218
       selected: true
       sourcePosition: right
       targetPosition: left
       type: custom
       width: 241
     viewport:
-      x: -958.2978231080281
-      y: 184.63838975969475
-      zoom: 0.609385394307287
+      x: 288.4922146240283
+      y: 250.8264418761308
+      zoom: 0.9525530208520231
   rag_pipeline_variables: []
