@@ -1,4 +1,4 @@
-# -Dify-
+# A Dify-based weather assistant using Caiyun API.
 A Dify-based weather assistant using Caiyun API (Coordinates required). Supports Outlook alerts with a touch of "Kagurazaka" style. ✨
 2. 详细配置说明 (README.md - 完整中英对照)
 
