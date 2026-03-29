@@ -2,6 +2,7 @@ app:
   description: '1'
   icon: 🤖
   icon_background: '#FFEAD5'
+  icon_type: emoji
   mode: workflow
   name: 自动提醒带伞2
   use_icon_as_answer_icon: false
@@ -9,12 +10,12 @@ dependencies:
 - current_identifier: null
   type: marketplace
   value:
-    marketplace_plugin_unique_identifier: langgenius/gemini:0.7.15@ca2b8f2599b87de968354f0e2ccbbc0d76bac5ebf275c3f0fbdae48881d74518
+    marketplace_plugin_unique_identifier: langgenius/gemini:0.7.20@de0063a630a6d1b2c025fb84f3462ba5151fb60618309cd595c3f4711b1df847
     version: null
 - current_identifier: null
   type: marketplace
   value:
-    marketplace_plugin_unique_identifier: langgenius/openai:0.2.10@7ca552fb9e48caa4deddfdef5aa71c200d06d03c26c2e8bb428b3250101b9cb3
+    marketplace_plugin_unique_identifier: langgenius/openai:0.3.4@3345b596ee5117d9304097feaee866f05ffaf0d76a790fb07acd8b99f6c87cb3
     version: null
 - current_identifier: null
   type: marketplace
@@ -240,7 +241,7 @@ workflow:
         selected: false
         title: 条件分支
         type: if-else
-      height: 175
+      height: 247
       id: '1773079981963'
       position:
         x: 1024
@@ -248,7 +249,7 @@ workflow:
       positionAbsolute:
         x: 1024
         y: 0
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -268,7 +269,7 @@ workflow:
             children: null
             type: string
         selected: false
-        title: 代码执行
+        title: 分析api获得的天气数据
         type: code
         variables:
         - value_selector:
@@ -284,7 +285,7 @@ workflow:
       positionAbsolute:
         x: 683
         y: 75
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -400,7 +401,7 @@ workflow:
       positionAbsolute:
         x: 2408
         y: 87
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -419,7 +420,7 @@ workflow:
             - sun
         frequency: daily
         mode: visual
-        selected: true
+        selected: false
         timezone: America/New_York
         title: 定时触发器
         type: trigger-schedule
@@ -438,7 +439,7 @@ workflow:
       positionAbsolute:
         x: 1.0498103287789036
         y: 36
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -477,7 +478,7 @@ workflow:
       positionAbsolute:
         x: 1365
         y: 57
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -522,7 +523,7 @@ workflow:
       positionAbsolute:
         x: 1706
         y: 57
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -551,7 +552,7 @@ workflow:
       positionAbsolute:
         x: 2047
         y: 39
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -669,13 +670,82 @@ workflow:
       positionAbsolute:
         x: 2408
         y: 218
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
       width: 241
+    - data:
+        author: 漫不经心的干饭人
+        desc: ''
+        height: 88
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"","text":"这里得注意你的时区到底是哪","type":"text","version":1}],"direction":null,"format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""}],"direction":null,"format":"","indent":0,"type":"root","version":1}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 240
+      height: 88
+      id: '1774794993536'
+      position:
+        x: -2.71383436504795
+        y: 202.35471793672468
+      positionAbsolute:
+        x: -2.71383436504795
+        y: 202.35471793672468
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 240
+    - data:
+        author: 漫不经心的干饭人
+        desc: ''
+        height: 88
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"","text":"别问为啥这里还加个llm，问就是我怕乱说","type":"text","version":1}],"direction":null,"format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""}],"direction":null,"format":"","indent":0,"type":"root","version":1}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 240
+      height: 88
+      id: '1774795017705'
+      position:
+        x: 1725.2739668050272
+        y: 186.60756300504116
+      positionAbsolute:
+        x: 1725.2739668050272
+        y: 186.60756300504116
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 240
+    - data:
+        author: 漫不经心的干饭人
+        desc: ''
+        height: 88
+        selected: false
+        showAuthor: true
+        text: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"","text":"用outlook的话，可能得注意一下就是多来几次微软可能给你封号","type":"text","version":1}],"direction":null,"format":"","indent":0,"type":"paragraph","version":1,"textFormat":0,"textStyle":""}],"direction":null,"format":"","indent":0,"type":"root","version":1}}'
+        theme: blue
+        title: ''
+        type: ''
+        width: 240
+      height: 88
+      id: '1774795097136'
+      position:
+        x: 2390.853715250852
+        y: 303.1365094994994
+      positionAbsolute:
+        x: 2390.853715250852
+        y: 303.1365094994994
+      sourcePosition: right
+      targetPosition: left
+      type: custom-note
+      width: 240
     viewport:
-      x: 288.4922146240283
-      y: 250.8264418761308
+      x: 0.5896983503014326
+      y: 284.25102937349703
       zoom: 0.9525530208520231
   rag_pipeline_variables: []
